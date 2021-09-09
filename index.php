@@ -86,7 +86,7 @@
                 contentType: false,
                 processData: false,
                 type: 'POST',
-                url: 'https://inventory-node.herokuapp.com//api/user/login',
+                url: 'https://inventory-node.herokuapp.com/api/user/login',
                 data: dataSet,
                 success: function(result) {
                     localStorage.setItem('token', result.token)
