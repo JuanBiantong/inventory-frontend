@@ -1,5 +1,5 @@
 <?php
-$api_url = 'http://localhost:5000/api/product';
+$api_url = 'https://invetory-js-php.herokuapp.com/api/product';
 $json_data = file_get_contents($api_url);
 
 
@@ -321,7 +321,7 @@ function rupiah($angka)
             contentType: false,
             processData: false,
 
-            url: 'http://localhost:5000/api/product/create',
+            url: 'https://invetory-js-php.herokuapp.com/product/create',
             type: 'POST',
             beforeSend: function(xhr) {
                 /* Authorization header */
@@ -346,7 +346,7 @@ function rupiah($angka)
 
     function deleteProduct(id) {
         $.ajax({
-            url: `http://localhost:5000/api/product/${id}`,
+            url: `https://invetory-js-php.herokuapp.com/api/product/${id}`,
             type: 'DELETE',
             success: function(result) {
                 Swal.fire({
@@ -364,7 +364,7 @@ function rupiah($angka)
 
     function updateProduct(id) {
         $.ajax({
-            url: `http://localhost:5000/api/product/${id}`,
+            url: `https://invetory-js-php.herokuapp.com/api/product/${id}`,
             type: 'GET',
             success: function(result) {
                 document.getElementById("update-name").value = result.productName;
@@ -397,7 +397,7 @@ function rupiah($angka)
             contentType: false,
             processData: false,
 
-            url: `http://localhost:5000/api/product/update/${id}`,
+            url: `https://invetory-js-php.herokuapp.com/api/product/update/${id}`,
             type: 'PATCH',
             beforeSend: function(xhr) {
                 /* Authorization header */

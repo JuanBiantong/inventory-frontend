@@ -86,7 +86,7 @@
                 contentType: false,
                 processData: false,
                 type: 'POST',
-                url: 'http://localhost:5000/api/user/login',
+                url: 'https://invetory-js-php.herokuapp.com/api/user/login',
                 data: dataSet,
                 success: function(result) {
                     localStorage.setItem('token', result.token)
