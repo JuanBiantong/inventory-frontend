@@ -86,7 +86,7 @@
                 contentType: false,
                 processData: false,
                 type: 'POST',
-                url: 'https://invetory-js-php.herokuapp.com/api/user/login',
+                url: 'https://inventory-node.herokuapp.com//api/user/login',
                 data: dataSet,
                 success: function(result) {
                     localStorage.setItem('token', result.token)
@@ -95,21 +95,6 @@
                 error: function(jqXHR) {
                     Swal.fire(jqXHR.responseJSON.error);
                 },
-
-                // type: 'POST',
-
-                // success: function(response) {
-                //     console.log('hi1');
-                //     var msg = "";
-                //     if (response == 1) {
-                //         // window.location = "product.php";
-                //     } else {
-                //         console.log('hi2');
-                //         msg = "Invalid username and password!";
-                //     }
-                //     console.log('hi3');
-                //     $("#message").html(msg);
-                // }
             });
         }
 
