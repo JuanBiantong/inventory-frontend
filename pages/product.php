@@ -321,7 +321,7 @@ function rupiah($angka)
             contentType: false,
             processData: false,
 
-            url: 'https://inventory-node.herokuapp.com/product/create',
+            url: 'https://inventory-node.herokuapp.com/api/product/create',
             type: 'POST',
             beforeSend: function(xhr) {
                 /* Authorization header */
